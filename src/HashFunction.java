@@ -1,6 +1,4 @@
-/**
- * Interface for calculating hash of a string.
- */
+/** Interface for calculating hash of a string. */
 interface HashFunction {
   /**
    * Calculates the hash value of the given string.

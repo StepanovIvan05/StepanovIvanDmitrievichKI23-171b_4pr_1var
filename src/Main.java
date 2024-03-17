@@ -2,9 +2,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
-  /**
-   * Main method to run the program.
-   */
+  /** Main method to run the program. */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean isBreak = false, isCalculated = false;
@@ -13,7 +11,7 @@ public class Main {
 
     while (!isBreak) {
       System.out.println(
-              """
+          """
               Menu:
               1. Entering string
               2. Calculate hash

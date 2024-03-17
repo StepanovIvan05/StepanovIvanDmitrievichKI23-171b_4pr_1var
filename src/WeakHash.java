@@ -1,6 +1,4 @@
-/**
- * Implementation of a weak hash function.
- */
+/** Implementation of a weak hash function. */
 class WeakHash implements HashFunction {
   /**
    * Calculates the weak hash value of the given string.
@@ -12,18 +10,18 @@ class WeakHash implements HashFunction {
   public int hash(String str) {
     // Counting unique characters
     HashFunction weakHash =
-            line -> {
-              int uniqueChars = 0;
-              boolean[] seen = new boolean[65536];
+        line -> {
+          int uniqueChars = 0;
+          boolean[] seen = new boolean[65536];
 
-              for (char c : str.toCharArray()) {
-                if (!seen[c]) {
-                  seen[c] = true;
-                  uniqueChars++;
-                }
-              }
-              return uniqueChars;
-            };
+          for (char c : str.toCharArray()) {
+            if (!seen[c]) {
+              seen[c] = true;
+              uniqueChars++;
+            }
+          }
+          return uniqueChars;
+        };
     return weakHash.hash(str);
   }
 }
