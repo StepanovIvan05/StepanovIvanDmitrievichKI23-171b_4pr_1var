@@ -1,26 +1,24 @@
 import java.util.Objects;
 import java.util.Scanner;
 
-// Интерфейс для вычисления хэша от строки
-interface HashFunction {
-  int hash(String str);
-}
-
 public class Main {
+  /**
+   * Main method to run the program.
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean isBreak = false, isCalculated = false;
     String input = "", choice;
     int weakResult = 0, strongResult = 0;
-    //меню
+
     while (!isBreak) {
       System.out.println(
-          """
+              """
               Menu:
-              1.Entering string
-              2.Calculate hash
-              3.Display hash
-              4.Exit
+              1. Entering string
+              2. Calculate hash
+              3. Display hash
+              4. Exit
               (1-4):""");
       choice = scanner.nextLine();
       switch (choice) {
@@ -59,7 +57,12 @@ public class Main {
     }
   }
 
-  //проверка: пустая ли строка
+  /**
+   * Checks if the input string is empty.
+   *
+   * @param input The input string to check
+   * @return True if the input string is empty, otherwise false
+   */
   static boolean isEmpty(String input) {
     if (Objects.equals(input, "")) {
       System.out.println("Empty string");
